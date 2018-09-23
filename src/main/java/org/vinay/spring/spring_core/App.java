@@ -11,7 +11,7 @@ public class App {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
 				BeanConfiguration.class);
-		AccountService accountService = applicationContext.getBean("accountService", AccountService.class);
+		AccountService accountService = applicationContext.getBean("accountServiceImpl", AccountService.class);
 		
 		System.out.println("\nBefore money transfer");
 		System.out.println("Account 1 balance :" + accountService.getAccount(1).getBalance());
