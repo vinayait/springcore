@@ -7,10 +7,14 @@ import org.springframework.stereotype.Service;
 public class AccountServiceImpl implements AccountService {
 	private AccountDao accountDao;
 	
-	@Autowired
-	public void setAccountDao(AccountDao accountDao) {
+	public AccountServiceImpl(AccountDao accountDao) {
 		this.accountDao = accountDao;
 	}
+	
+	/*@Autowired
+	public void setAccountDao(AccountDao accountDao) {
+		this.accountDao = accountDao;
+	}*/
 
 	@Override
 	public void transferMoney(long sourceAccountId, long targetAccountId, double amount) {

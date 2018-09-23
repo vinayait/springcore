@@ -10,8 +10,8 @@ public class BeanConfiguration {
 	
 	@Bean
 	public AccountService accountService() {
-		AccountServiceImpl bean = new AccountServiceImpl();
-		bean.setAccountDao(accountDao());
+		AccountServiceImpl bean = new AccountServiceImpl(accountDao());
+		//bean.setAccountDao(accountDao());
 		return bean;
 	}
 	
